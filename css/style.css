@@ -1,0 +1,326 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.menu-mobile{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    background: #111;
+    color: white;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    z-index:1000;
+}
+
+.header.scrolled{
+    background:#111;
+    padding: 15px 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu a{
+    color: white;
+    margin-left: 25x;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color: #00bfff;
+}
+
+/* Hero */
+.hero{
+    height: 400px;
+    
+    background: linear-gradient(135deg, #00bfff, #005bea);
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+}
+
+.hero h1{
+    font-size: 40px;
+}
+
+button{
+    padding: 12px 25px;
+    margin-top: 15px;
+    border: none;
+    background: #00bfff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #009acd;
+}
+
+/*sobre */
+.sobre{
+    padding: 60px 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.sobre h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.sobre p{
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*Serviços*/
+.servicos{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.servicos h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.estatisticas{
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.stats{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.stat h3{
+    font-size: 40px;
+    color: #005bea;
+}
+
+.stat p{
+    font-size: 18px;
+}
+
+/*card */
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: white;
+    padding: 30px;
+    width: 260px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card h3{
+    margin-bottom: 10px;
+}
+
+.card i{
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #00bfff;
+}
+
+/*contato*/
+.contato{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contato form{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato input, .contato textarea{
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contato textarea{
+    height: 120px;
+}
+
+.cotato button{
+    background: #00bfff;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.contato button:hover{
+    background: #009acd;
+}
+
+.erro {
+    color: red;
+    font-size: 14px;
+    display: block;
+    text-align: left;
+}
+
+#sucesso{
+    color: green;
+    margin-top: 10px;
+}
+
+/* estados dos inputs */
+input, textarea{
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+/*erro */
+.input-erro{
+    border: 2px solid red;
+}
+
+/* sucesso*/
+.input-sucesso{
+    border: 2px solid green;
+}
+
+
+/*footer*/
+footer{
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.reveal{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tablet */
+@media (max-width: 900px){
+    .header{
+        flex-direction: column;
+    gap: 10px;
+    }
+
+    .hero h1{
+        font-size: 32px;
+    }
+}
+
+/*Celular */
+@media (max-width: 600px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero{
+        height: 300px;
+        padding: 20px;
+    }
+
+    .hero h1{
+        font-size: 26px;
+    }
+    
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:768px){
+
+.menu{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:70px;
+    right:20px;
+    background:#111;
+    padding:20px;
+}
+
+.menu a{
+    margin: 10px 0;
+}
+
+.menu-mobile{
+    display: block;
+}
+
+.menu.ativo{
+    display:flex;
+}
+
+}
