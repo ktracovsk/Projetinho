@@ -45,7 +45,7 @@ header {
 }
 
 .menu a{
-    color: white;
+    color: rgb(0, 0, 0);
     margin-left: 25x;
     text-decoration: none;
 }
